@@ -57,7 +57,7 @@ def detect_and_predict_mask(frame, faceNet, maskNet):
 			faces.append(face)
 			locs.append((startX, startY, endX, endY))
 
-	# only make a predictions if at least one face was detected
+	# only make a predictions if one face was detected
 	if len(faces) > 0:
 		# for faster inference we'll make batch predictions on *all*
 		# faces at the same time rather than one-by-one predictions
@@ -68,12 +68,11 @@ def detect_and_predict_mask(frame, faceNet, maskNet):
 
 	return (locs, preds)
 
-# load our serialized face detector model from disk
 prototxtPath = r"face_detector\deploy.prototxt"
 weightsPath = r"face_detector\res10_300x300_ssd_iter_140000.caffemodel"
 faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
 
-# load the face mask detector model from disk
+# load the model from disk
 maskNet = load_model("mask_detector.model")
 
 # initialize the video stream
@@ -112,11 +111,10 @@ while True:
 			cv2.FONT_HERSHEY_SIMPLEX, 0.45, color, 2)
 		cv2.rectangle(frame, (startX, startY), (endX, endY), color, 2)
 
-	# show the output frame
 	cv2.imshow("Frame", frame)
 	key = cv2.waitKey(1) & 0xFF
 
-	# if the `q` key was pressed, break from the loop
+	
 	if key == ord("q"):
 		break
 
