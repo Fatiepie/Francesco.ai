@@ -7,4 +7,4 @@ It then feeds the model into openCV where it uses my laptop's webcam (or any cam
 
 I hope you enjoy the demo!
 
-[![Watch the video](https://img.https://www.youtube.com/watch?v=emdcdljuGRg&ab_channel=NeilFernandes.jpg)](https://youtu.be/emdcdljuGRg)
+[![Watch the video](https://img.https://https://youtu.be/emdcdljuGRg.jpg)](https://youtu.be/emdcdljuGRg)
