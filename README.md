@@ -6,5 +6,5 @@ The main concept that francesco uses is that of a convolutional neural network, 
 It then feeds the model into openCV where it uses my laptop's webcam (or any camera attached to the main program for that matter) to detect whether a person is wearing a mask or not in real time!
 
 I hope you enjoy the demo!
+[![Watch the video](https://img.youtube.com/emdcdljuGRg.jpg)](https://youtu.be/emdcdljuGRg)
 
-[![Watch the video](https://img.https://https://youtu.be/emdcdljuGRg.jpg)](https://youtu.be/emdcdljuGRg)
